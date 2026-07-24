@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: anqingju
+    runtime: node
+    plan: free
+    buildCommand: npm install
+    startCommand: node server.js
+    healthCheckPath: /api/me
+    autoDeploy: true
